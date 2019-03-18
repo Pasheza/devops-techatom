@@ -42,4 +42,4 @@ unit-test:
     - python manage.py test
   artifacts:
     reports:
-      junit: /code/unittest.xml
+      junit: unittest.xml
