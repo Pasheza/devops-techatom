@@ -8,3 +8,14 @@ build:
     - docker build -t banners_web:$CI_BUILD_REF_NAME .
   tags:
     - vagrant
+build_in_docker:
+  services:
+    - docker:dind
+  stage: build
+  variables:
+    DOCKER_HOST: tcp://docker:2375
+  script:
+    - whoami
+    - docker build -t banners_web:$CI_BUILD_REF_NAME .
+  tags:
+    - docker_in_docker
