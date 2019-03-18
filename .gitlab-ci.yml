@@ -1,0 +1,10 @@
+stages:
+  - build
+
+build:
+  stage: build
+  script:
+    - whoami
+    - docker build -t banners_web:$CI_BUILD_REF_NAME .
+  tags:
+    - vagrant
