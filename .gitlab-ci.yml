@@ -26,6 +26,8 @@ build_in_docker:
 unit-test:
   image: banners_web:$CI_BUILD_REF_NAME
   stage: test
+  variables:
+    GIT_STRATEGY: none
   tags:
     - docker_in_docker
   script:
