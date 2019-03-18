@@ -26,8 +26,12 @@ build_in_docker:
 unit-test:
   image: banners_web:$CI_BUILD_REF_NAME
   stage: test
+  services:
+    - name: mysql:5.7
+      alias: db
   variables:
     GIT_STRATEGY: none
+    MYSQL_ROOT_PASSWORD: root_1234
   tags:
     - docker_in_docker
   script:
