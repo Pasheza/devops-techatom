@@ -19,3 +19,4 @@ build_in_docker:
     - docker build -t banners_web:$CI_BUILD_REF_NAME .
   tags:
     - docker_in_docker
+  when: manual
