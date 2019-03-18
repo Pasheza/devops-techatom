@@ -37,7 +37,7 @@ unit-test:
   tags:
     - docker_in_docker
   script:
-    - whoami
+    - export TEST_OUTPUT_DIR=`pwd`
     - cd /code/
     - python manage.py test
   artifacts:

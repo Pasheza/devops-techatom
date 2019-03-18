@@ -127,3 +127,4 @@ TEST_RUNNER = 'xmlrunner.extra.djangotestrunner.XMLTestRunner'
 TEST_OUTPUT_VERBOSE = True
 TEST_OUTPUT_FILE_NAME = "unittest.xml"
 TEST_OUTPUT_DIR = "/code/"
+TEST_OUTPUT_DIR = os.environ.get('TEST_OUTPUT_DIR', '/code/')
