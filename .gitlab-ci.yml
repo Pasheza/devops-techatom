@@ -40,3 +40,6 @@ unit-test:
     - whoami
     - cd /code/
     - python manage.py test
+  artifacts:
+    reports:
+      junit: /code/unittest.xml
