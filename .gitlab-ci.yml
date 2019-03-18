@@ -32,6 +32,8 @@ unit-test:
   variables:
     GIT_STRATEGY: none
     MYSQL_ROOT_PASSWORD: root_1234
+    BANNERS_DATABASE_USER: root
+    BANNERS_DATABASE_PASSWORD: root_1234
   tags:
     - docker_in_docker
   script:
