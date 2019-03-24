@@ -39,6 +39,7 @@ unit-test:
   script:
     - export TEST_OUTPUT_DIR=`pwd`
     - cd /code/
+    - flake8
     - python manage.py test
   artifacts:
     reports:
