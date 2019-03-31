@@ -55,13 +55,15 @@ flake8-test:
 
 molecule:
   stage: test
-  image: ansible/ansible:latest
+  image: banners_web:$CI_BUILD_REF_NAME
   tags:
     - docker_in_docker
   script:
     - pwd
     - ls
-    # - yum -y install epel-release && yum -y install ansible
+    - pip3.6 install ansible molecule docker
+    - ansible --version
+    - molecule --version
     - cd ansible/roles/docker
     - molecule test
     
