@@ -61,6 +61,7 @@ molecule:
   tags:
     - docker_in_docker
   script:
+    - cat /etc/*-release
     - pwd
     - ls
     - docker -v
