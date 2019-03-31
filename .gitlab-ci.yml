@@ -55,12 +55,13 @@ flake8-test:
 
 molecule:
   stage: test
+  image: ansible:latest
   tags:
     - docker_in_docker
   script:
     - pwd
     - ls
-    - yum -y install epel-release && yum -y install ansible
+    # - yum -y install epel-release && yum -y install ansible
     - cd ansible/roles/docker
     - molecule test
     
