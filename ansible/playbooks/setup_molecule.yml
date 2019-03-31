@@ -1,0 +1,33 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Add EPEL repository
+      yum:
+        name: epel-release
+
+    - name: Installing dependencies
+      yum:
+        name:
+          - gcc
+          - python-pip
+          - python-devel
+          - openssl-devel
+          - libselinux-python
+
+    - name: Upgrade pip
+      pip:
+        name:
+          - pip
+          - setuptools
+        extra_args: --upgrade
+
+    - name: Install molecule
+      pip:
+        name: molecule
+        extra_args:
+          --ignore-installed PyYAML
+
+    - name: Install python docker
+      pip:
+        name:
+          - docker
