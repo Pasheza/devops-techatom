@@ -60,6 +60,6 @@ molecule:
   script:
     - pwd
     - ls
-    - cd /code/ansible/roles/docker
+    - cd ansible/roles/docker
     - molecule test
     
