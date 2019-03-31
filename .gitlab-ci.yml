@@ -43,6 +43,7 @@ unit-test:
   artifacts:
     reports:
       junit: unittest.xml
+  when: manual
 
 flake8-test:
   stage: test
@@ -52,6 +53,7 @@ flake8-test:
   script:
     - cd /code/
     - flake8
+  when: manual
 
 molecule:
   stage: test
@@ -65,5 +67,5 @@ molecule:
     - ansible --version
     - molecule --version
     - cd ansible/roles/docker
-    - molecule test
+    - molecule test --debug
     
