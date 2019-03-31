@@ -61,7 +61,7 @@ molecule:
   script:
     - pwd
     - ls
-    - pip3.6 install ansible molecule docker
+    - pip install ansible molecule docker
     - ansible --version
     - molecule --version
     - cd ansible/roles/docker
