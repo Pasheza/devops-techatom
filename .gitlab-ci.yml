@@ -55,7 +55,7 @@ flake8-test:
 
 molecule:
   stage: test
-  image: ansible:latest
+  image: ansible/ansible:latest
   tags:
     - docker_in_docker
   script:
