@@ -68,5 +68,5 @@ molecule:
     - python -V
     - ansible --version
     - molecule --version
-    - cd ansible/roles/docker
+    - cd ansible/
     - molecule --debug  test    
