@@ -52,3 +52,12 @@ flake8-test:
   script:
     - cd /code/
     - flake8
+
+molecule:
+  stage: test
+  tags:
+    - docker_in_docker
+  script:
+    - cd /code/ansible/roles/docker
+    - molecule test
+    
