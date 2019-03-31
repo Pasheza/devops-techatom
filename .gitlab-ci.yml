@@ -37,6 +37,18 @@ unit-test:
   tags:
     - docker_in_docker
   script:
-    - whoami
+    - export TEST_OUTPUT_DIR=`pwd`
     - cd /code/
     - python manage.py test
+  artifacts:
+    reports:
+      junit: unittest.xml
+
+flake8-test:
+  stage: test
+  image: banners_web:$CI_BUILD_REF_NAME
+  tags:
+    - docker_in_docker
+  script:
+    - cd /code/
+    - flake8
