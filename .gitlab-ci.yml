@@ -58,6 +58,8 @@ molecule:
   tags:
     - docker_in_docker
   script:
+    - pwd
+    - ls
     - cd /code/ansible/roles/docker
     - molecule test
     
