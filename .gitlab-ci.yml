@@ -60,6 +60,7 @@ molecule:
   script:
     - pwd
     - ls
+    - yum -y install epel-release && yum -y install ansible
     - cd ansible/roles/docker
     - molecule test
     
