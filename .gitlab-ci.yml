@@ -79,8 +79,8 @@ deploy_to_prod:
   tags:
     - vagrant
   script:
-    - docker tag banners_web:$CI_BUILD_REF_NAME devopsmephi/banners:$CI_COMMIT_SHORT_SHA
-    - docker tag banners_web:$CI_BUILD_REF_NAME devopsmephi/banners:latest
-    - docker push devopsmephi/banners:$CI_COMMIT_SHORT_SHA
-    - docker push devopsmephi/banners:latest
+    - docker tag banners_web:$CI_BUILD_REF_NAME pasheza/banners:$CI_COMMIT_SHORT_SHA
+    - docker tag banners_web:$CI_BUILD_REF_NAME pasheza/banners:latest
+    - docker push pasheza/banners:$CI_COMMIT_SHORT_SHA
+    - docker push pasheza/banners:latest
   when: manual 
