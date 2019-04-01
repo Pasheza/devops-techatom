@@ -73,6 +73,7 @@ molecule:
     - molecule --version
     - cd ansible/roles/docker
     - molecule --debug  test
+  when: manual
 
 deploy_to_prod:
   stage: deploy
