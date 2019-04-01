@@ -69,4 +69,5 @@ molecule:
     - ansible --version
     - molecule --version
     - cd ansible/roles/docker
-    - molecule --debug  test    
+    - molecule --debug  create
+    - molecule --debug  test  
