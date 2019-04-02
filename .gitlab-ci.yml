@@ -58,6 +58,8 @@ flake8-test:
 
 molecule:
   stage: test
+  services:
+    - docker:dind
   variables:
     DOCKER_HOST: tcp://docker:2375
   image: quay.io/ansible/molecule
@@ -73,7 +75,6 @@ molecule:
     - molecule --version
     - cd ansible/roles/docker
     - molecule --debug  test
-  when: manual
 
 deploy_to_prod:
   stage: deploy
